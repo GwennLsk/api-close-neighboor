@@ -3,8 +3,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
-const controller = require('./controllers/UserController');
+const controller = require('./controllers/HttpController');
 const debug = require('debug')('UserService: server');
+const amqp = require('./controllers/AmqpController');
 
 
 const app = express();
@@ -15,6 +16,8 @@ db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', () => {
     debug('Connected to mongo !');
 });
+
+amqp();
 
 app.use(logger('dev'));
 app.use(express.json());
