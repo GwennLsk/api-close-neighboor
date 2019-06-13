@@ -1,0 +1,34 @@
+
+  ##  ##
+  ##  ##      RabbitMQ 3.7.15. Copyright (C) 2007-2019 Pivotal Software, Inc.
+  ##########  Licensed under the MPL.  See https://www.rabbitmq.com/
+  ######  ##
+  ##########  Logs: /usr/local/var/log/rabbitmq/rabbit@localhost.log
+                    /usr/local/var/log/rabbitmq/rabbit@localhost_upgrade.log
+
+              Starting broker...
+ completed with 6 plugins.
+Stopping and halting node rabbit@localhost ...
+
+  ##  ##
+  ##  ##      RabbitMQ 3.7.15. Copyright (C) 2007-2019 Pivotal Software, Inc.
+  ##########  Licensed under the MPL.  See https://www.rabbitmq.com/
+  ######  ##
+  ##########  Logs: /usr/local/var/log/rabbitmq/rabbit@localhost.log
+                    /usr/local/var/log/rabbitmq/rabbit@localhost_upgrade.log
+
+              Starting broker...
+ completed with 6 plugins.
+Stopping and halting node rabbit@localhost ...
+
+  ##  ##
+  ##  ##      RabbitMQ 3.7.15. Copyright (C) 2007-2019 Pivotal Software, Inc.
+  ##########  Licensed under the MPL.  See https://www.rabbitmq.com/
+  ######  ##
+  ##########  Logs: /usr/local/var/log/rabbitmq/rabbit@localhost.log
+                    /usr/local/var/log/rabbitmq/rabbit@localhost_upgrade.log
+
+              Starting broker...
+ completed with 6 plugins.
+ERROR: node with name "rabbit" already running on "localhost"
+ERROR: node with name "rabbit" already running on "localhost"

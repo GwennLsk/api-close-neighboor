@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cac6d4c4-6b3a-4ae7-b484-cab56ca53076" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../AuthService/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AuthService/controller/AuthController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AuthService/messages/emitter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AuthService/messages/receiver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UserService/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UserService/controllers/AmqpController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UserService/messages/amqpConnect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthService/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages/receiver.js" beforeDir="false" afterPath="$PROJECT_DIR$/messages/receiver.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UserService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UserService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UserService/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UserService/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UserService/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UserService/controllers/HttpController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UserService/messages/receiver.js" beforeDir="false" afterPath="$PROJECT_DIR$/../UserService/messages/receiver.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -155,10 +143,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="811" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -248,15 +235,17 @@
       <workItem from="1558890267972" duration="4021000" />
       <workItem from="1558896326017" duration="7474000" />
       <workItem from="1559132782436" duration="9350000" />
+      <workItem from="1559548577267" duration="476000" />
+      <workItem from="1559722490849" duration="507000" />
+      <workItem from="1559813868552" duration="1743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20845000" />
+    <option name="totallyTimeSpent" value="23571000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="811" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -329,10 +318,24 @@
     <entry file="file://$PROJECT_DIR$/model/schemas/AddressSchema.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/StatutController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/messages/emitter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -347,20 +350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/StatutController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
         </state>
       </provider>
     </entry>
