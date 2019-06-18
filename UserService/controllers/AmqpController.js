@@ -132,6 +132,16 @@ function updateUser() {
         })
     })
 }
+function deleteUser() {
+    conn.channel.then((ex) => {
+        conn.conn.then((ch) => {
+            ch.assertQueue('', {exclusive: true}).then((q) => {
+                ch.prefetch(1);
+                ch.bindQueue(q.queue, conn.exchange, 'delete');
+            })
+        })
+    })
+}
 
 module.exports = getUser;
 

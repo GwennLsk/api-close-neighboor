@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="79a8ccfc-16c3-439b-9a7f-5f36fafcf8f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StatutsServices/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/StatutsServices/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/controllers/AmqpController.js" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/controllers/AmqpController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiGateway/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiGateway/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/UserService.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/UserService.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/mongod.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/mongod.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run-all.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run-all.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,22 +25,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apiGateway/app.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run-all.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="126">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logs/mongod.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1484" />
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -47,36 +50,51 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logs/UserService.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logs/rabbitmq.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/apiGateway.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
+            <state relative-caret-position="-332" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiGateway/bin/www">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AuthService/bin/www">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UserService/controllers/AmqpController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="142" column="6" lean-forward="true" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logs/apiGateway.txt">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -89,11 +107,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/AuthService/package.json" />
+        <option value="$PROJECT_DIR$/apiGateway/bin/www" />
+        <option value="$PROJECT_DIR$/apiGateway/package.json" />
+        <option value="$PROJECT_DIR$/StatutsServices/package.json" />
+        <option value="$PROJECT_DIR$/UserService/package.json" />
         <option value="$PROJECT_DIR$/run-all.sh" />
+        <option value="$PROJECT_DIR$/AuthService/bin/www" />
+        <option value="$PROJECT_DIR$/UserService/controllers/AmqpController.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="808" />
@@ -114,7 +145,35 @@
             <path>
               <item name="apiCN" type="b2602c69:ProjectViewProjectNode" />
               <item name="apiCN" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
+              <item name="apiGateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apiCN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apiCN" type="462c0819:PsiDirectoryNode" />
+              <item name="apiGateway" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apiCN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apiCN" type="462c0819:PsiDirectoryNode" />
+              <item name="AuthService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apiCN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apiCN" type="462c0819:PsiDirectoryNode" />
+              <item name="AuthService" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apiCN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apiCN" type="462c0819:PsiDirectoryNode" />
+              <item name="UserService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apiCN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apiCN" type="462c0819:PsiDirectoryNode" />
+              <item name="UserService" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -131,7 +190,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.Jenkins" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -174,11 +233,13 @@
       <workItem from="1558731219194" duration="735000" />
       <workItem from="1560435654509" duration="4116000" />
       <workItem from="1560505246907" duration="2570000" />
+      <workItem from="1560760606500" duration="10000" />
+      <workItem from="1560855117493" duration="2257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9212000" />
+    <option name="totallyTimeSpent" value="11479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -216,29 +277,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apiGateway/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/mongod.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/rabbitmq.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apiGateway/bin/www">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiGateway/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthService/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiGateway/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StatutsServices/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserService/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run-all.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="126">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -248,13 +328,44 @@
     <entry file="file://$PROJECT_DIR$/logs/AuthService.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/logs/mongod.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1484" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/rabbitmq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-332" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/logs/StatutsService.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/UserService.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiGateway/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AuthService/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserService/controllers/AmqpController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="142" column="6" lean-forward="true" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
         </state>
       </provider>
     </entry>
