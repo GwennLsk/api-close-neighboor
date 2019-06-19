@@ -17,7 +17,11 @@ db.once('open', () => {
     debug('Connected to mongo !');
 });
 
-amqp();
+amqp.createUser();
+amqp.getUser();
+amqp.updateUser();
+amqp.getUsers();
+amqp.createUser();
 
 app.use(logger('dev'));
 app.use(express.json());

@@ -1,8 +1,6 @@
 let amqp = require('amqplib/callback_api');
 let colors = require('colors')
 
-let args = process.argv.slice(2);
-
 module.exports = function (model, id, callback) {
     let object = 'test';
     amqp.connect('amqp://localhost', function (error0, connection) {

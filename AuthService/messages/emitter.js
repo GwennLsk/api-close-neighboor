@@ -9,6 +9,7 @@ module.exports = function (model, id, callback) {
         }
         connection.createChannel((error1, channel) => {
             if(error1) throw error1;
+            channel.assertExchange(model, 'direct', {durable: false});
             channel.assertQueue('', {
                 exclusive: true
             }, (error2, q) => {
@@ -29,12 +30,12 @@ module.exports = function (model, id, callback) {
                     noAck: true
                 });
 
-                channel.sendToQueue(`${model}`,
+            })
+                connection.publish(`${model}`,
                     Buffer.from(id.toString()),{
                         correlationId: correlationId,
                         replyTo: q.queue
                     })
-            })
         })
     });
 };

@@ -1,6 +1,7 @@
 let conn = require('../messages/amqpConnect');
 const { ObjectID } = require('mongodb');
 let User = require('../model/User');
+const emitter = require('../messages/emitter');
 
 function createUser() {
     conn.channel.then((ex) => {
@@ -12,15 +13,9 @@ function createUser() {
                     var body = _.pick(msg.content, ['name', 'firstname','email', 'password']);
                     var user = new User(body);
                     user.save().then(doc => {
-                        ch.sendToQueue(msg.properties.replyTo,
-                            Buffer.from(JSON.stringify(doc), {
-                                correlationID: msg.properties.correlationId
-                            }));
+                        send(ch, JSON.stringify(doc))
                     }).catch(err => {
-                        ch.sendToQueue(msg.properties.replyTo,
-                            Buffer.from(JSON.stringify(err)), {
-                                correlationId: msg.properties.correlationId
-                            });
+                        send(ch, JSON.stringify(err))
                     }).finally(() => ch.ack(msg))
                 })
             })
@@ -35,15 +30,9 @@ function getUsers() {
                 ch.bindQueue(q.queue, conn.exchange, 'get_all');
                 ch.consume(q.queue, function reply(msg) {
                     User.find().then(users => {
-                        ch.sendToQueue(msg.properties.replyTo,
-                            Buffer.from(JSON.stringify(users)), {
-                                correlationId: msg.properties.correlationId
-                            });
+                        send(ch, JSON.stringify(users))
                     }).catch(err => {
-                        ch.sendToQueue(msg.properties.replyTo,
-                            Buffer.from(JSON.stringify(err)), {
-                                correlationId: msg.properties.correlationId
-                            });
+                        send(ch, JSON.stringify(err))
                     }).finally(() => ch.ack(msg))
                 })
             })
@@ -59,14 +48,11 @@ function getUser() {
                 ch.consume(q.queue, function reply(msg) {
                     let id = parseInt(msg.content.toString());
                     if (!ObjectID.isValid(id))
-                        ch.sendToQueue(msg.properties.replyTo, `${id} is invalid`);
+                        send(ch,`${id} is invalid`);
                     User.findById(id).then((user) => {
-                        if(!user) ch.sendToQueue(msg.properties.replyTo, `user not found`)
+                        send(ch, `user not found`);
                         function callback() {
-                            ch.sendToQueue(msg.properties.replyTo,
-                                Buffer.from(JSON.stringify(user)), {
-                                correlationId: msg.properties.correlationId
-                                });
+                            send(ch, JSON.stringify(user))
                         }
                         if (msg.properties.relations) {
                             if (user.statuts) {
@@ -84,10 +70,7 @@ function getUser() {
                         }
                         else callback();
                     }).catch((err) => {
-                        ch.sendToQueue(msg.properties.replyTo,
-                            Buffer.from(JSON.stringify(err)), {
-                                correlationId: msg.properties.correlationId
-                            });
+                        send(ch, JSON.stringify(user))
                     }).finally(() => ch.ack(msg))
                 })
             })
@@ -119,13 +102,10 @@ function updateUser() {
                         'pages'
                     ]);
                     User.find().then(users => {
-                        ch.sendToQueue(msg.properties.replyTo, users);
+                        send(ch, JSON.stringify(users))
 
                     }).catch(err => {
-                        ch.sendToQueue(msg.properties.replyTo,
-                            Buffer.from(JSON.stringify(err)), {
-                                correlationId: msg.properties.correlationId
-                            });
+                        send(ch, JSON.stringify(err))
                     }).finally(() => ch.ack(msg))
                 })
             })
@@ -138,10 +118,31 @@ function deleteUser() {
             ch.assertQueue('', {exclusive: true}).then((q) => {
                 ch.prefetch(1);
                 ch.bindQueue(q.queue, conn.exchange, 'delete');
+                ch.consume(q.queue, function reply(msg) {
+                    let id = msg.properties.id;
+                    User.findByIdAndDelete(id).then( user =>
+                        send(ch, JSON.stringify(user))
+                    ).catch(err => {
+                        send(ch, JSON.stringify(err))
+                    })
+                })
             })
         })
     })
 }
 
-module.exports = getUser;
+function send(ch, msg) {
+    ch.sendToQueue(msg.properties.replyTo,
+        Buffer.from(msg), {
+            correlationId: msg.properties.correlationId
+        });
+}
+
+module.exports = {
+    createUser,
+    getUser,
+    getUsers,
+    updateUser,
+    deleteUser
+};
 
