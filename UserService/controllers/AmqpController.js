@@ -21,6 +21,14 @@ function createUser() {
             })
         })
     })
+}function createUser() {
+        var body = _.pick(msg.content, ['name', 'firstname','email', 'password']);
+        var user = new User(body);
+        user.save().then(doc => {
+            send(ch, JSON.stringify(doc))
+        }).catch(err => {
+            send(ch, JSON.stringify(err))
+        })
 }
 function getUsers() {
     conn.channel.then((ex) => {
