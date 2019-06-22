@@ -2,17 +2,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-let mongoose = require('mongoose');
+let emitter = require('./messages/emitter');
+let receiver = require('./messages/receiver');
+let amqp = require('./messages/amqpConnect')
 
 
 var app = express();
 
-mongoose.connect( "mongodb://localhost:27017/close-neighboor", { useNewUrlParser: true });
-let db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error'));
-db.once('open', () => {
-    debug('Connected to mongo !');
-});
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -26,5 +22,11 @@ app.get('/', (req, res) => {
 app.get('/:id', (req, res) => {
    res.send('id='+req.params.id)
 });
+
+amqp.response('test', (msg) => {
+    return `hello ${msg.content.toString()}`
+});
+
+
 
 module.exports = app;

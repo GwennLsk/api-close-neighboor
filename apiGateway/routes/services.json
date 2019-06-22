@@ -14,5 +14,9 @@
   "statuts": {
     "api": "/statuts",
     "url": "http://localhost:3003"
+  },
+  "auth": {
+    "api": "/auth",
+    "url": "http://localhost:3004"
   }
 }

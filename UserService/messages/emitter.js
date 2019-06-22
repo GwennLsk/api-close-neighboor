@@ -7,7 +7,7 @@ module.exports = function (model, method, content) {
     const pub = context.socket('PUBLISH', {routing: 'direct'});
     const sub = context.socket('SUBSCRIBE', { routing: 'direct'});
 
-    sub.connect(model, '*', () => {
+    sub.connect(model, method, () => {
         pub.connect(model, () => {
             pub.publish(method, JSON.stringify(content))
         })
