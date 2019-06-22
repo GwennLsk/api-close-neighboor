@@ -2,8 +2,7 @@ let conn = require('../messages/amqpConnect');
 const { ObjectID } = require('mongodb');
 let User = require('../model/User');
 const _ = require('lodash');
-const emitter = require('../messages/emitter');
-const amqp = require('../messages/amqpConnect');
+
 
 function createUser(msg) {
         var body = _.pick(msg, ['name', 'firstname','email', 'password']);
