@@ -17,7 +17,6 @@ module.exports = () => {
                 let id = msg.content.toString();
                 Statut.findById(id)
                     .then(statut => {
-                       console.log(statut);
                         channel.sendToQueue(msg.properties.replyTo,
                             Buffer.from(JSON.stringify(statut)), {
                                 correlationId: msg.properties.correlationId

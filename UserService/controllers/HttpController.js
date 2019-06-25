@@ -4,11 +4,13 @@ const { ObjectID } = require('mongodb');
 let emitter = require('../messages/emitter');
 
 function createUser(req, res) {
+    console.log(req.body)
     var body = _.pick(req.body, ['name', 'firstname','email', 'password']);
     var user = new User(body);
     user.save().then(doc => {
         res.status(200).send(doc);
     }).catch(err => {
+        console.log(err)
         res.status(400).send(err);
     })
 }
@@ -52,13 +54,44 @@ function getUser(req, res) {
     })
 }
 
+function getUserByProps(req, res) {
+    console.log(req.query);
+    User.find(req.query).then(user => {
+        if (!user)
+            return res.status(404).send();
+        function callback() {
+            res.status(200).send({user});
+        }
+        if (req.get('options-withrelations') === 'true' ) {
+            if (user.statuts) {
+                let i = 0;
+                user.statuts.forEach((statut, index, array) => {
+                    emitter(statut.service, statut.link, (res) => {
+                        user.statuts[i] = res;
+                        i++;
+                        if (i === array.length) {
+                            callback()
+                        }
+                    });
+                });
+            }
+        }else {
+            callback()
+        }
+    }).catch(err => {
+        res.status(400).send('Error: '+err);
+    })
+}
+
 function updateUser(req, res) {
+    console.log(req.headers)
     let id = req.params.id;
     let body = _.pick(req.body, [
         'name',
         'firstname',
         'email',
         'password',
+        'tokens',
         'address',
         'jobs',
         'birthdate',
@@ -96,6 +129,7 @@ function deleteUser(req, res) {
 module.exports = {
     createUser,
     getUser,
+    getUserByProps,
     getUsers,
     updateUser,
     deleteUser

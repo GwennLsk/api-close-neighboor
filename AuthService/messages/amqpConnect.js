@@ -25,6 +25,7 @@ function consumer(q, callback) {
             ch.consume(q, function(msg) {
                 if (msg !== null) {
                     callback(msg);
+                    console.log('test')
                     ch.ack(msg);
                 }
             });
@@ -42,7 +43,10 @@ function connect(callback) {
 
 function request(q, msg, callback) {
     consumer(`${q}_response`, (mess) => {
+        console.log("amqpConnect, request().consumer()");
+        console.log(callback.toString());
         callback(mess)
+        console.log('end of callback');
     });
     publisher(`${q}_request`, JSON.stringify(msg))
 }
@@ -59,5 +63,6 @@ module.exports = {
     consumer,
     publisher,
     request,
-    response
+    response,
+    connect
 }

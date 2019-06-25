@@ -10,7 +10,7 @@ function publisher(q, message) {
         function on_open(err, ch) {
             if (err != null) bail(err);
             ch.assertQueue(q);
-            ch.sendToQueue(q, Buffer.from(message));
+            ch.sendToQueue(q, Buffer.from(JSON.stringify(message)));
         }
     })
 }
@@ -48,10 +48,10 @@ function request(q, msg, callback) {
 }
 function response(q, callback) {
     consumer(`${q}_request`, (msg) => {
-        callback(msg).then( res => {
-                publisher(`${q}_response`, res)
+        callback(msg).then( mess => {
+                publisher(`${q}_response`, mess)
             }
-        );
+        ).catch(err => console.error(err));
     })
 }
 

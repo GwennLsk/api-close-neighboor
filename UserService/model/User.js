@@ -32,6 +32,16 @@ let UserSchema = new Schema({
         type: String,
         required: true,
     },
+    tokens: [{
+        access: {
+            type: String,
+            required: true
+        },
+        token: {
+            type: String,
+            required: true
+        }
+    }],
     birthdate: {
         type: Date,
     },
