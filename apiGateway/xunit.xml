@@ -1,0 +1,7 @@
+<testsuite name="Mocha Tests" tests="5" failures="0" errors="0" skipped="0" timestamp="Thu, 27 Jun 2019 16:24:14 GMT" time="0.611">
+<testcase classname="-----------USER-------------- /POST users" name="should create a use" time="0.112"/>
+<testcase classname="-----------USER-------------- /POST users" name="should not create if missing non-optional properties" time="0.017"/>
+<testcase classname="-----------USER-------------- /GET users" name="should return 3 users" time="0.022"/>
+<testcase classname="-----------USER-------------- /GET users/id" name="should return a user" time="0.017"/>
+<testcase classname="-----------USER-------------- /GET users/id" name="should not return a user" time="0.011"/>
+</testsuite>

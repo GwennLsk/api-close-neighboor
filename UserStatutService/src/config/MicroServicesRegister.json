@@ -1,0 +1,8 @@
+{
+  "user": {
+    "url": "http://localhost:3002"
+  },
+  "statuts": {
+    "url": "http://localhost:3003"
+  }
+}

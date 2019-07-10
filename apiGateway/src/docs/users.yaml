@@ -1,0 +1,128 @@
+paths:
+  /users/:
+    get:
+      produces:
+        - application/json
+      responses:
+        200:
+          description: should return all users
+    post:
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: createUser
+          description: permit te create user
+          schema:
+            $ref: '#/definitions/createUser'
+      responses:
+        200:
+          description: the user was successfully created
+        400:
+          description: bad request, the email was already existing ?
+  /users/{id}:
+    get:
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: the id of the user
+      responses:
+        200:
+          description: return the user of given id
+        404:
+          description: the user was not found
+    patch:
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: the user to update
+        - in: body
+          name: updateUser
+          description: the field(s) to update
+          schema:
+            $ref: '#/definitions/updateUser'
+      responses:
+        200:
+          description: the user was successfully updated
+        404:
+          description: the user was not found
+    delete:
+      parameters:
+        - name: id
+          in: path
+          descriptions: the user to delete
+      responses:
+        200:
+          description: the user was successfully deleted
+        404:
+          description: the user was not found
+  /users/find?{prop}={value}:
+    get:
+      produce:
+        - application/json
+      parameters:
+        - name: prop
+          in: path
+          description: the name of the property
+        - name: value
+          in: path
+          description: the value to search
+      responses:
+        200:
+          description: the user was found
+        404:
+          description: user not found
+
+definitions:
+  createUser:
+    type: object
+    properties:
+      name:
+        type: string
+        required: true
+      firstname:
+        type: string
+        required: true
+      email:
+        type: string
+        required: true
+      password:
+        type: string
+        required: true
+  updateUser:
+    type: object
+    properties:
+      name:
+        type: string
+      firstname:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      tokens:
+        type: string
+      address:
+        type: string
+      jobs:
+        type: string
+      birthdate:
+        type: string
+      pictures:
+        type: object
+      statuts:
+        type: ObjectID
+      annonces:
+        type: ObjectID
+      events:
+        type: ObjectID
+      friends:
+        type: ObjectID
+      commerces:
+        type: object
+      pages:
+        type: object

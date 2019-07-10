@@ -3,14 +3,29 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=* node ./bin/www"
+    "start": "DEBUG=* node src/bin/www",
+    "test": "nyc mocha tests/router.test.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
+    "axios-debug-log": "^0.6.2",
+    "chai": "^4.2.0",
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "lodash": "^4.17.11",
-    "morgan": "~1.9.1"
+    "mocha-sonar-reporter": "^0.1.6",
+    "morgan": "~1.9.1",
+    "qs": "^6.7.0",
+    "swagger-jsdoc": "^3.3.0",
+    "swagger-ui-express": "^4.0.7"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "mocha-sonarqube-reporter": "^1.0.1",
+    "mongodb": "^3.2.7",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
   }
 }

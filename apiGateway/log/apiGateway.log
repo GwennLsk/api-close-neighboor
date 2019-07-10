@@ -1,0 +1,163 @@
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "x-powered-by" to true
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "etag" to 'weak'
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "etag fn" to [Function: generateETag]
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "env" to 'development'
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "query parser" to 'extended'
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "query parser fn" to [Function: parseExtendedQueryString]
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "subdomain offset" to 2
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "trust proxy" to false
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "trust proxy fn" to [Function: trustNone]
+Wed, 10 Jul 2019 10:08:46 GMT express:application booting in development mode
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "view" to [Function: View]
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "views" to '/Users/gwennlinski/Documents/Dev/Aston/apiCN/apiGateway/views'
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "jsonp callback name" to 'callback'
+Wed, 10 Jul 2019 10:08:46 GMT express:router use '/' query
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router use '/' expressInit
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router use '/' logger
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router use '/' jsonParser
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router use '/' urlencodedParser
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router use '/' cookieParser
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router use '/' serveStatic
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+{
+  info: {
+    title: 'REST API for my App',
+    version: '1.0.0',
+    description: 'This is the REST API for my product'
+  },
+  host: 'localhost:3000',
+  basePath: '/',
+  swagger: '2.0',
+  paths: {},
+  definitions: {},
+  responses: {},
+  parameters: {},
+  securityDefinitions: {},
+  tags: []
+}
+Wed, 10 Jul 2019 10:08:46 GMT express:router use '/docs' swaggerInitFn
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/docs'
+Wed, 10 Jul 2019 10:08:46 GMT express:router use '/docs' serveStatic
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/docs'
+Wed, 10 Jul 2019 10:08:46 GMT express:router use '/docs' <anonymous>
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/docs'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/users/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users/statuts(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users/statuts(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/users/statuts(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users/statuts/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users/statuts/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/users/statuts/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route post '/users/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users/statuts/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users/statuts/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route post '/users/statuts/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route patch '/users/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route delete '/users/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/users'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/users(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/users/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route post '/users'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route post '/users/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route patch '/users/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/users/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/users/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route delete '/users/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/statuts(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/statuts(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/statuts(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/statuts/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/statuts/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/statuts/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route post '/statuts'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/statuts/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/statuts/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route post '/statuts/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route patch '/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route delete '/statuts/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/auth'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/auth'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/auth'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/auth(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/auth(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/auth(/:path)?/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/auth/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/auth/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route get '/auth/find'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/auth'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/auth'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route post '/auth'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/auth/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/auth/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route post '/auth/:uri'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/auth/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/auth/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route patch '/auth/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route new '/auth/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/auth/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:route delete '/auth/:id'
+Wed, 10 Jul 2019 10:08:46 GMT express:router:layer new '/'
+Wed, 10 Jul 2019 10:08:46 GMT express:application set "port" to 3000
+Wed, 10 Jul 2019 10:08:46 GMT apiGateway:server Listening on port 3000
