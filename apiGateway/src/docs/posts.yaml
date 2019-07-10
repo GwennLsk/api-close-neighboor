@@ -1,0 +1,100 @@
+paths:
+  /statuts/:
+    get:
+      produces:
+        - application/json
+      responses:
+        200:
+          description: should return all statuts
+    post:
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: createUser
+          description: permit te create statut
+          schema:
+            $ref: '#/definitions/createStatut'
+      responses:
+        200:
+          description: the statut was successfully created
+        400:
+          description: bad request, the email was already existing ?
+  /statuts/{id}:
+    get:
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: the id of the statut
+      responses:
+        200:
+          description: return the statut of given id
+        404:
+          description: the statut was not found
+    patch:
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: the statut to update
+        - in: body
+          name: updateUser
+          description: the field(s) to update
+          schema:
+            $ref: '#/definitions/updateStatut'
+      responses:
+        200:
+          description: the statut was successfully updated
+        404:
+          description: the statut was not found
+    delete:
+      parameters:
+        - name: id
+          in: path
+          descriptions: the statut to delete
+      responses:
+        200:
+          description: the statut was successfully deleted
+        404:
+          description: the statut was not found
+  /statuts/find?{prop}={value}:
+    get:
+      produce:
+        - application/json
+      parameters:
+        - name: prop
+          in: path
+          description: the name of the property
+        - name: value
+          in: path
+          description: the value to search
+      responses:
+        200:
+          description: the statut was found
+        404:
+          description: statut not found
+
+definitions:
+  createStatut:
+    type: object
+    properties:
+        description:
+          type: string
+        pictures:
+          type: string
+        author:
+          type: string
+  updateStatut:
+    type: object
+    properties:
+        description:
+          type: string
+        pictures:
+          type: string
+        likes:
+          type: string
+        comments:
+          type: string

@@ -29,7 +29,6 @@ module.exports = function (app) {
                         }
                     }
                 } else {
-
                     route = services[service].url, {
                         headers: req.headers
                     }
@@ -52,8 +51,6 @@ module.exports = function (app) {
                         console.log(headers[key])
                     }
                 });
-                // require('axios-debug-log');
-                // axios.interceptors.request.use((config) => console.log(config));
                 axios.get(services[service].url+'/find?' + qs.stringify(req.query), {
                     headers: headers,
                 }).then((resp) => {
