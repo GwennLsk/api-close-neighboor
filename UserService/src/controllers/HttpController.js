@@ -59,11 +59,12 @@ function getUser(req, res) {
 }
 
 function getUserByProps(req, res) {
+    console.log('gueries: ');
+    console.log(req);
     console.log(req.query);
     User.find(req.query).then(user => {
         if (!user)
             return res.status(404).send();
-        console.log(user)
         res.status(200).send({user});
     }).catch(err => {
         res.status(400).send('Error: '+err);
@@ -72,7 +73,7 @@ function getUserByProps(req, res) {
 
 function updateUser(req, res) {
     let id = req.params.id;
-    console.log(req.body)
+    console.log(req.body);
     let body = _.pick(req.body, [
         'name',
         'firstname',
@@ -101,10 +102,10 @@ function updateUser(req, res) {
     let update;
     if (req.headers['options-remove']) {
         update = User.findByIdAndUpdate(id, {$pull: toPush}, {new: true})
-    } else if (toPush) {
-        console.log(toPush)
+    } else if (Object.keys(toPush).length > 0) {
         update = User.findByIdAndUpdate(id, {$push: toPush}, {new: true})
     } else {
+        console.log('bonjour')
         update = User.findByIdAndUpdate(id, {$set: body}, {new: true})
     }
     update.then(user => {

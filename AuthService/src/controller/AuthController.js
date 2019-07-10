@@ -2,7 +2,7 @@ const _ = require('lodash');
 let amqp = require('../messages/amqpConnect')
 let bcrypt = require('bcrypt');
 let jwt = require('jsonwebtoken')
-let axios = require('axios');
+let axios = require('axios/index');
 let queryString = require('querystring')
 
 let userUrl = 'http://localhost:3002/'

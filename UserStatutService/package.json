@@ -1,20 +1,20 @@
 {
-  "name": "authservice",
+  "name": "userstatutservice",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=* node src/bin/www"
+    "start": "node src/bin/www"
   },
   "dependencies": {
-    "amqplib": "^0.5.3",
     "axios": "^0.19.0",
-    "bcrypt": "^3.0.6",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "http-error": "0.0.6",
+    "http-errors": "^1.6.3",
+    "jade": "~1.11.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.11",
-    "morgan": "~1.9.1",
-    "rabbit.js": "^0.4.4"
+    "morgan": "~1.9.1"
   }
 }

@@ -1,16 +1,53 @@
-exchanger asserted
-exchanger asserted
-exchanger asserted
-exchanger asserted
-exchanger asserted
-connected to server
-exchanger asserted
-connected to server
-exchanger asserted
-connected to server
-exchanger asserted
-exchanger asserted
-connected to server
-exchanger asserted
-connected to server
-exchanger asserted
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "x-powered-by" to true
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "etag" to 'weak'
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "etag fn" to [Function: generateETag]
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "env" to 'development'
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "query parser" to 'extended'
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "query parser fn" to [Function: parseExtendedQueryString]
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "subdomain offset" to 2
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "trust proxy" to false
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "trust proxy fn" to [Function: trustNone]
+Mon, 08 Jul 2019 09:25:15 GMT express:application booting in development mode
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "view" to [Function: View]
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "views" to '/Users/gwennlinski/Documents/Dev/Aston/apiCN/views'
+Mon, 08 Jul 2019 09:25:15 GMT express:application set "jsonp callback name" to 'callback'
+Mon, 08 Jul 2019 09:25:15 GMT express:router use '/' query
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router use '/' expressInit
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router use '/' logger
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router use '/' jsonParser
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router use '/' urlencodedParser
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router use '/' cookieParser
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router use '/' serveStatic
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route get '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route post '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route new '/find'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/find'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route get '/find'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route new '/:id'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/:id'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route get '/:id'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route new '/:id'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/:id'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route patch '/:id'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route new '/:id'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/:id'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:route delete '/:id'
+Mon, 08 Jul 2019 09:25:15 GMT express:router:layer new '/'
+Mon, 08 Jul 2019 09:25:15 GMT UserService: server Connected to mongo !
+(node:56262) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.

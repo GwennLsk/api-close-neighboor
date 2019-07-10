@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DEBUG=* node ./apiGateway/app.js >> ./logs/apiGateway.txt &
-DEBUG=* node ./UserService/app.js >> ./logs/UserService.txt &
-DEBUG=* node ./StatutsServices/app.js >> ./logs/StatutsService.txt &
-DEBUG=* node ./AuthService/app.js >> ./logs/AuthService.txt
+DEBUG=apiGateway:* node ./apiGateway/src/app.js > ./logs/apiGateway.txt 2>&1 &
+DEBUG=UserService:* node ./UserService/src/app.js > ./logs/UserService.txt 2>&1 &
+DEBUG=* node ./StatutsService/src/app.js > ./logs/StatutsService.txt 2>&1 &
+DEBUG=* node ./AuthService/src/app.js > ./logs/AuthService.txt 2>&1 &

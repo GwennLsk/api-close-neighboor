@@ -3,7 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=* node ./bin/www"
+    "start": "DEBUG=* node src/bin/www"
+  },
+  "config": {
+    "mocha-sonar-reporter": {
+      "classname": "Test",
+      "testdir": "test",
+      "outputfile": "report/TEST-results.xml"
+    }
   },
   "dependencies": {
     "amqplib": "^0.5.3",

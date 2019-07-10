@@ -1,0 +1,31 @@
+{
+  info: {
+    title: 'REST API for my App',
+    version: '1.0.0',
+    description: 'This is the REST API for my product'
+  },
+  host: 'localhost:3000',
+  basePath: '/',
+  swagger: '2.0',
+  paths: {
+    '/users/': { get: [Object], post: [Object] },
+    '/users/{id}': { get: [Object], patch: [Object], delete: [Object] },
+    '/users/find?{prop}={value}': { get: [Object] }
+  },
+  definitions: {
+    createUser: { type: 'object', properties: [Object] },
+    updateUser: { type: 'object', properties: [Object] }
+  },
+  responses: {},
+  parameters: {},
+  securityDefinitions: {},
+  tags: []
+}
+[0mGET /docs/ [36m304 [0m10.296 ms - -[0m
+[0mGET /docs/swagger-ui-init.js [36m304 [0m4.823 ms - -[0m
+[0mGET /docs/swagger-ui.css [36m304 [0m20.803 ms - -[0m
+[0mGET /docs/swagger-ui-bundle.js [36m304 [0m19.343 ms - -[0m
+[0mGET /docs/swagger-ui-standalone-preset.js [36m304 [0m19.416 ms - -[0m
+[0mGET /docs/favicon-32x32.png [36m304 [0m1.021 ms - -[0m
+[0mGET /users/find?firstname=Gertrude [32m200 [0m92.381 ms - 378[0m
+[0mGET /users/find?firstname=ddd [32m200 [0m18.636 ms - 11[0m

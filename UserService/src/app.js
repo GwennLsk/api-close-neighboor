@@ -31,10 +31,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 amqp();
 
-app.get('/', controller.getUsers);
 app.post('/', controller.createUser);
 app.get('/find', controller.getUserByProps);
 app.get('/:id', controller.getUser);
+app.get('/', controller.getUsers);
 app.patch('/:id', controller.updateUser);
 app.delete('/:id', controller.deleteUser);
 

@@ -1,4 +1,4 @@
-let axios = require('axios');
+let axios = require('axios/index');
 let register = require('../config/MicroServicesRegister');
 let _ = require('lodash');
 let jwt = require('jsonwebtoken')
