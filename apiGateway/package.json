@@ -7,7 +7,7 @@
     "test": "nyc mocha tests/router.test.js"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "axios-debug-log": "^0.6.2",
     "chai": "^4.2.0",
     "cookie-parser": "~1.4.4",
